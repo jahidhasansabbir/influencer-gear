@@ -1,0 +1,95 @@
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* shared styles */
+body{
+    margin: 0px 2%;
+}
+.flex{
+    display: flex;
+}
+.text-center{
+    text-align: center;
+}
+.center{
+    margin: 0 auto;
+}
+.f28{
+    font-size: 1.8rem;
+}
+.f24{
+    font-size: 1.5rem;
+}
+.f52{
+    font-size: 3.25rem;
+}
+.bold{
+    font-weight: 700;
+}
+.semibold{
+    font-weight: 600;
+}
+.medium{
+    font-weight: 500;
+}
+.text-primary{
+    color:rgba(58, 58, 58, 1);
+}
+.color-primary{
+    color: rgba(224, 44, 109, 1);
+}
+.mt{
+    margin-top: 24px;
+}
+.mb{
+    margin-bottom: 24px;
+}
+.ml{
+    margin-left: 24px;
+}
+.mr{
+    margin-right: 24px;
+}
+/* header related styles */
+nav, ul{
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+nav li{
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+}
+.menu-container{
+    gap: 24px;
+    align-items: center;
+}
+.menu-bar{
+    display: none;
+}
+/* Small device responsiveness */
+@media screen and (max-width: 576px) {
+    .hide{
+        display: none;
+    }
+    .menu-bar{
+        display: block;
+
+    }
+    .menu-brand{
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-direction: row-reverse;
+        width: 80%;
+    }
+    .brand{
+        text-align: center;
+    }
+}
