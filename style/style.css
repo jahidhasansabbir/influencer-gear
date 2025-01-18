@@ -111,12 +111,18 @@ nav a{
     max-width: 582px;
 }
 
-.banner-img img{
-    width: 40vw;
+.banner-img{
     background: url('../images/Circle\ design.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.banner-img img{
+    width: 100%;
 }
 
 /* Brand logo related styles */
