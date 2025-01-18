@@ -82,21 +82,22 @@ header,main, footer{
     justify-content: center;
 }
 /* header related styles */
-nav, ul{
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-}
-
 nav li{
     list-style: none;
 }
 nav a{
     text-decoration: none;
+    color:rgba(58, 58, 58, 1);
 }
-.menu-container{
-    gap: 24px;
-    align-items: center;
+nav, nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+}
+nav i{
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 .menu-bar{
     display: none;
@@ -225,6 +226,9 @@ footer h2, footer p, footer i{
     .banner-img img{
         width: 80vw;
     }
+    nav h2{
+        font-size: 23px;
+    }
     .menu-bar{
         display: block;
 
@@ -268,6 +272,9 @@ footer h2, footer p, footer i{
 @media screen  and (min-width: 576px) and (max-width: 992px) {
     .banner-content h1{
         font-size: 2rem;
+    }
+    .banner-content p{
+        font-weight: 500;
     }
     .banner-content{
         margin-right: 24px;
