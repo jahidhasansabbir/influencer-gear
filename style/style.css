@@ -5,11 +5,10 @@
     padding: 0;
 }
 /* shared styles */
-body{
-    margin: 0px 2%;
-}
-header{
+header,main, footer{
     max-width: 1440px;  
+    margin: 0 auto;
+    padding: 0 7%;
 }
 .flex{
     display: flex;
@@ -159,13 +158,16 @@ nav a{
 }
 /* footer related styles */
 footer{
-    
+    background: rgba(10, 8, 38, 1);
+    padding: 50px 0;
 }
-
+footer h2, footer p{
+    color: white;
+}
 /* Small device responsiveness */
 @media screen and (max-width: 576px) {
     html{
-        font-size: 12px;
+        font-size: 16px;
     }
     .hide{
         display: none;
@@ -183,6 +185,7 @@ footer{
     }
     .brand{
         text-align: center;
+        font-size: 24px;
     }
     .banner{
         flex-direction: column-reverse;
