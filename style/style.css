@@ -104,6 +104,24 @@ nav a{
     width: 80%;
 }
 
+/* Brand logo related styles */
+.logo-container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 32px;
+    max-width: 987px;
+    margin: 24px auto;
+}
+.logo-container img{
+    width: 100%;
+}
+.brand-logo hr{
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(192, 204, 218, 0.10) 0%, rgba(192, 204, 218, 0.60) 50.38%, rgba(192, 204, 218, 0.10) 100%);
+}
 /* Small device responsiveness */
 @media screen and (max-width: 576px) {
     html{
@@ -135,5 +153,12 @@ nav a{
     }
     .banner-content p{
         font-weight: 500;
+    }
+
+    .logo-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .brand-logo hr{
+        display: none;
     }
 }
