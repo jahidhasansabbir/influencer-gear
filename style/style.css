@@ -5,6 +5,9 @@
     padding: 0;
 }
 /* shared styles */
+body{
+    font-family: "Poppins", serif;
+}
 header,main, footer{
     max-width: 1440px;  
     margin: 0 auto;
@@ -29,7 +32,7 @@ header,main, footer{
     font-size: 1.5rem;
 }
 .f52{
-    font-size: 3.25rem;
+    font-size: 3rem;
 }
 .f14{
     font-size: .8rem;
@@ -73,6 +76,10 @@ header,main, footer{
     padding: 10px 24px;
     border-radius: 41px;
     border: none;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: center;
 }
 /* header related styles */
 nav, ul{
@@ -98,21 +105,18 @@ nav a{
     justify-content: space-between;
     align-items: center;
     margin: 80px 0;
+
 }
 .banner-content{
     max-width: 582px;
 }
-.banner-img{
+
+.banner-img img{
+    width: 40vw;
     background: url('../images/Circle\ design.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    justify-content: center;
-    align-items: center;
-}
-.banner-img img{
-    height: 80%;
-    width: 80%;
 }
 
 /* Brand logo related styles */
@@ -140,6 +144,9 @@ nav a{
 .card img{
     width: 100%;
 }
+.rating{
+    color: rgba(251, 130, 0, 1);
+}
 .card h3, h4, h5, p{
     margin-top: 12px;
 }
@@ -156,14 +163,51 @@ nav a{
 #see-more{
     text-decoration: none;
 }
+#see-more p{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+/* Featured products related styles */
+.featured-product{
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.featured-product img{
+    width: 100%;
+    flex: 1;
+}
+.featured-content{
+    max-width: 610px;
+    flex: 1;
+}
+.featured-content button{
+    border-radius: 2px;
+}
+
 /* footer related styles */
 footer{
     background: rgba(10, 8, 38, 1);
     padding: 50px 0;
 }
-footer h2, footer p{
+footer h2, footer p, footer i{
     color: white;
 }
+.social-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-weight: 100;
+    margin-top: 12px;
+    font-size: 24px;
+}
+
 /* Small device responsiveness */
 @media screen and (max-width: 576px) {
     html{
@@ -171,6 +215,9 @@ footer h2, footer p{
     }
     .hide{
         display: none;
+    }
+    .banner-img img{
+        width: 80vw;
     }
     .menu-bar{
         display: block;
@@ -185,13 +232,13 @@ footer h2, footer p{
     }
     .brand{
         text-align: center;
-        font-size: 24px;
+        font-size: 22px;
     }
     .banner{
         flex-direction: column-reverse;
     }
     .banner-content h1{
-        font-size: 2rem;
+        font-size: 1.75rem;
         margin-top: 24px;
     }
     .banner-content p{
@@ -206,5 +253,26 @@ footer h2, footer p{
     }
     .card-container{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .featured-product{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen  and (min-width: 576px) and (max-width: 992px) {
+    .banner-content h1{
+        font-size: 2rem;
+    }
+    .banner-content{
+        margin-right: 24px;
+    }
+    .banner-img img{
+        width: 35vw;
+    }
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .featured-product img{
+        width: 40vw;
     }
 }
