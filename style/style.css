@@ -8,6 +8,9 @@
 body{
     margin: 0px 2%;
 }
+header{
+    max-width: 1440px;  
+}
 .flex{
     display: flex;
 }
@@ -53,6 +56,13 @@ body{
 .mr{
     margin-right: 24px;
 }
+.btn-primary{
+    background: rgba(224, 44, 109, 1);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 41px;
+    border: none;
+}
 /* header related styles */
 nav, ul{
     justify-content: space-between;
@@ -73,8 +83,32 @@ nav a{
 .menu-bar{
     display: none;
 }
+.banner{
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 0;
+}
+.banner-content{
+    max-width: 582px;
+}
+.banner-img{
+    background: url('../images/Circle\ design.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+}
+.banner-img img{
+    height: 80%;
+    width: 80%;
+}
+
 /* Small device responsiveness */
 @media screen and (max-width: 576px) {
+    html{
+        font-size: 12px;
+    }
     .hide{
         display: none;
     }
@@ -91,5 +125,15 @@ nav a{
     }
     .brand{
         text-align: center;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-content h1{
+        font-size: 2rem;
+        margin-top: 24px;
+    }
+    .banner-content p{
+        font-weight: 500;
     }
 }
